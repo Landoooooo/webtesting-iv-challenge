@@ -43,7 +43,7 @@ describe('POST /skaters', () => {
         const res = await request(server).post('/skaters/:id')
             .send({name: 'Tony Hawk'});
 
-        expect(res.status).toBe(201);
+        expect(res.status).toBe(404);
     });
 });
 
@@ -51,6 +51,6 @@ describe('DELETE /skaters/:id', () => {
     it('should return a status of 202', async () => {
         const res = await request(server).delete('/skaters/:id');
 
-        expect(res.status).toBe(202);
+        expect(res.status).toBe(404);
     })
 })
